@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Navbar />
-    <SideNav />
     <div>
       <div class="page-title">
         <h3>Счет</h3>
@@ -63,14 +61,9 @@
 
 <script>
 // @ is an alias to /src
-import SideNav from "../components/SideNav";
-import Navbar from "../components/Navbar";
 
 export default {
   name: "Home",
-  components: {
-    SideNav,
-    Navbar,
-  },
+  components: {},
 };
 </script>

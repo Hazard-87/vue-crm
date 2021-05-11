@@ -1,9 +1,10 @@
 <template>
   <div class="app-main-layout">
-    <Navbar />
-    <SideNav />
+    <Navbar @click-menu="isOpen = !isOpen" />
 
-    <main class="app-content">
+    <Sidebar v-model="isOpen" />
+
+    <main class="app-content" :class="{ full: !isOpen }">
       <div class="app-page">
         <router-view />
       </div>
@@ -19,13 +20,17 @@
 
 <script>
 // @ is an alias to /src
-import SideNav from "../components/SideNav";
+import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 
 export default {
-  name: "MainLayout",
+  name: "main-layout",
+  data: () => ({
+    isOpen: true,
+  }),
+
   components: {
-    SideNav,
+    Sidebar,
     Navbar,
   },
 };
