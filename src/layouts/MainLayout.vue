@@ -10,11 +10,7 @@
       </div>
     </main>
 
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large blue" href="#">
-        <i class="large material-icons">add</i>
-      </a>
-    </div>
+    <AddButton />
   </div>
 </template>
 
@@ -22,6 +18,7 @@
 // @ is an alias to /src
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import AddButton from "../components/AddButton";
 
 export default {
   name: "main-layout",
@@ -32,6 +29,7 @@ export default {
   components: {
     Sidebar,
     Navbar,
+    AddButton,
   },
 };
 </script>
